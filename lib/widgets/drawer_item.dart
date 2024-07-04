@@ -1,3 +1,4 @@
+import 'package:adaptive_ui/main.dart';
 import 'package:adaptive_ui/models/drawer_item_model.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,11 @@ class DrawerItem extends StatelessWidget {
       title: FittedBox(
           alignment: Alignment.centerLeft,
           fit: BoxFit.scaleDown,
-          child: Text(drawerItem.tittle)),
+          child: Text(
+            drawerItem.tittle,
+            style: TextStyle(
+                fontSize: getResponsiveFontSize(context, fontBaseSize: 18)),
+          )),
     );
   }
 }
